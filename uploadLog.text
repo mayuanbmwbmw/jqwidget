@@ -1,0 +1,16 @@
+2015-09-25
+1、修改select插件中存在的缺陷（select/default-style/js/jquery.zl_select.u1.js）
+2、增加针对select单独dom执行的插件（select/default-style/js/jquery.zl_select.u2.js）
+2015-09-28
+1、增加单独绑定checkbox控件插件（checkbox/default-style/test_l.html）
+2、增加timeline插件，依赖于jquery、jquery-ui（timeline）
+3、增加niceScroll插件（openSource/niceScroll）
+
+2016-08-25
+1.defaultMsg边框
+2.imagesSlider横向滚动条
+3.animateTip组件命名单词修改，document绑定事件解绑。
+4.checkbox组件base页面文字错行。
+5.mouseWheel组件应用场景？
+6.radio u3样式问题
+7.radio new生成的对象，如何释放？

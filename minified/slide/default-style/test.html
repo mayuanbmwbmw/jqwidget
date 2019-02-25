@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/content.css">
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../common/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.zl_slide.min.js"></script>
+<title></title>
+<script>
+$(function(){
+	$(".zl_slide").zl_slide({
+		w: 320
+	   	,h: 200
+		,s:"s3"
+		,autoplay: true
+		,showNumber: 3
+		,start_index: 0
+		,data: [{name:"pic1.jpg"},{name:"pic2.jpg"},{name:"pic3.jpg"},{name:"pic4.jpg"},{name:"pic5.jpg"},{name:"pic6.jpg"},{name:"pic7.jpg"},{name:"pic8.jpg"}]
+	});
+})
+</script>
+</head>
+<body>
+<div class="zl_slide" style="background:#ccc;"></div>
+</body>
+</html>

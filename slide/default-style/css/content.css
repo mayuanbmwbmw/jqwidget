@@ -1,0 +1,51 @@
+﻿/* CSS Document */
+.zl_slide{
+	position: relative; 
+	overflow:hidden;
+	cursor:pointer;
+}
+.zl_slide .picShow_handle_left{
+	position:absolute;
+	float:left;
+	left:41px;
+	width:55px;
+	height:99px;
+	background:url(../images/prepage.png);
+	cursor:pointer;
+}
+.zl_slide .picShow_handle_right{
+	position:absolute;
+	float:right;
+	right:41px;
+	width:55px;
+	height:99px;
+	background:url(../images/nextpage.png);
+	cursor:pointer;
+}
+.zl_slide ul{
+	list-style: none;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	height: auto;
+	bottom: 5px;
+	width:auto;
+	right:0px;
+}
+.zl_slide ul li{
+	list-style:none;
+	float:left;
+	margin-right:10px;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	background:#FFF;
+}
+.zl_slide ul li:hover{
+	color:#FFF;
+	background:#000;
+}
+.zl_slide ul li.selected{
+	color:#FFF;
+	background:#000;
+}

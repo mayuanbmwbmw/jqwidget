@@ -1,0 +1,208 @@
+﻿/* CSS Document */
+.organize-wrapper .organize-left {
+	width: 240px;
+/*	display: inline-block;*/
+	float: left;
+}
+.organize-wrapper .search-wrapper {
+	margin: 10px 0 0;
+	border: 1px solid #e4e4e4;
+	height: 20px;
+}
+.organize-wrapper .search-wrapper .search-icon {
+	width: 30px;
+	height: 20px;
+	background: url(../images/search-icon.png) no-repeat 15px 2px;
+	float: left;
+}
+.organize-wrapper .level-wrapper {
+	margin: 10px 0 0;
+	height: 230px;
+	border: 1px solid #e4e4e4;
+	overflow-y: auto;
+	overflwo-x: hidden;
+}
+.organize-wrapper .filter-wrapper {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+.organize-wrapper .filter-wrapper li,
+.organize-wrapper .operations-wrapper li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	height: auto;
+}
+.organize-wrapper .filter-wrapper li:first-child {
+	margin-right: 40px;
+}
+.organize-wrapper .organize-middle {
+	width: 20px;
+	height: 150px;
+	background: url(../images/organize-middle-icon.png) no-repeat 2px top;
+/*	display: inline-block;*/
+	margin-left: 5px;
+	margin-top: 120px;
+	float: left;
+}
+.organize-wrapper .organize-right {
+	width: 240px;
+/*	display: inline-block;*/
+	float: left;
+}
+.organize-wrapper .datas-wrapper {
+	margin: 10px 0 0;
+	height: 315px;
+	border: 1px solid #e4e4e4;
+	overflow-y: auto;
+	overflwo-x: hidden;
+}
+.organize-wrapper .operations-wrapper {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+.organize-wrapper .operations-wrapper li.operations {
+	float: right;
+}
+.organize-wrapper .bt_icon {
+	position: relative;
+	display: inline-block;
+    cursor: pointer;
+    line-height: normal;
+    text-align: center;
+    width: auto;
+	height: auto;
+	padding: 0;
+	font-size: 12px;
+}
+.organize-wrapper .bt_icon_b1{
+	background: url(../images/btn_delete.png) no-repeat 10px;
+	width: 50px;
+	text-align: right;
+}
+/*************************组织架构层级******************************/
+.organize-wrapper .level-ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.organize-wrapper .level-ul li a {
+	height: 25px;
+	cursor: pointer;
+}
+.organize-wrapper .level-ul li,
+.organize-wrapper .level-ul ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.organize-wrapper .level-ul a {
+	display: block;
+    overflow: hidden;
+    white-space: nowrap;
+	line-height: 25px;
+/*	padding-left: 30px;*/
+}
+.organize-wrapper .level-ul a.icon {
+	background: url(../images/level-close.png) no-repeat;
+}
+.organize-wrapper .level-ul > li > a {
+/*	margin-left: 10px;*/
+}
+.organize-wrapper .level-ul  li  ul {
+/*	margin-left: 20px;*/
+}
+.organize-wrapper .level-ul > li > ul {
+/*	margin-left: 30px;*/
+}
+.organize-wrapper .level-ul li a.hover {
+	background-color: #f3f3f3;
+}
+.organize-wrapper .level-ul div.hover-left-border {
+	height: 25px;
+	width: 3px;
+	background: #3BC381;
+	position: absolute;
+	top: 0;
+}
+.organize-wrapper .level-ul div.hover-right-add {
+	height: 16px;
+	width: 16px;
+	background: url(../images/add.png) no-repeat center;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
+}
+/*************************组织架构层级 end******************************/
+/*************************组织架构选择项******************************/
+.organize-wrapper .datas-ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.organize-wrapper .datas-ul li,
+.organize-wrapper .datas-ul ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.organize-wrapper .datas-ul li a {
+	width: 100%;
+	display: block;
+	height: 25px;
+	cursor: pointer;
+	line-height: 25px;
+	text-indent: 30px;
+}
+.organize-wrapper .datas-ul > li > a {
+	font-weight: bold;
+	background-color: #f3f3f3;
+	line-height: 25px;
+	text-indent: 10px;
+}
+.organize-wrapper .datas-ul > li {
+	display: none;
+}
+.organize-wrapper .datas-ul div.hover-right-del {
+	height: 16px;
+	width: 16px;
+	background: url(../images/remove.png) no-repeat center;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
+}
+.organize-wrapper .datas-ul li a.hover {
+	background-color: #f3f3f3;
+}
+/*************************组织架构选择项 end******************************/
+
+.organize-wrapper .items-numbers {
+	margin-left: 5px;
+}
+/*************************企业外邀请**************************************/
+.organize-wrapper .outer-invite-wrapper {
+	margin-top: 5px;
+}
+.organize-wrapper .outer-invite-wrapper .btn_enter{
+	height: 16px;
+	width: 16px;
+/*	display: inline-block;*/
+	float: right;
+	right: 0;
+	position: relative;
+	background: url("../images/add.png") no-repeat 0px 0px;
+}
+/*************************企业外邀请 end**************************************/

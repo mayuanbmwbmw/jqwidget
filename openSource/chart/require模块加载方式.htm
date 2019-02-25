@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>validation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-size: 85%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="dist/echarts.js" type="text/javascript"></script>
+<script>
+        //图1-问题解决率
+       var imgUrl = null;
+        require.config({
+            paths:{
+                echarts: "dist"
+            }
+        });
+        // 作为入口
+        require(
+                [
+                    'echarts',
+                    'echarts/chart/pie'//引入需要的jar包//echarts是require中定义的变量。
+                ],
+                myPieChart
+        );
+
+       // var echarts;
+        var pieChart;
+        function myPieChart(ec) {
+            //柱状图
+            var pie2Chart = ec.init(document.getElementById("pie"));
+        	pie2Chart.setOption(pie_option);
+
+        }
+        
+        //图2-问题类别处理概况
+       var pie_option = {
+           backgroundColor:'#fff',
+            title : {
+                text: '-问题类别处理概况-',
+                bottom:20,
+                right:110,
+                textStyle:{
+                    fontWeight: 'normal',
+                    color:'#999',
+                    fontSize: 16
+                }
+
+            },
+            tooltip: {
+                trigger: 'item',
+                show:false
+            },
+            legend: {
+                orient : 'vertical',
+                align : 'left',
+                textStyle:{
+                    color:'#999',
+                    fontSize: 12
+                },
+                itemGap:17,
+                icon: 'circle',
+                left:45,
+                top:43,
+                data:['业务','人事','财务','市场','开发','销售','其他']
+            },
+            series: [
+                {
+                    name:'问题类别处理概况',
+                    type:'pie',
+                    radius: ['24%', '63%'],
+                    center: ['60%', '45%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'outside'
+                        },
+                        emphasis: {
+                            show: true,
+                            formatter: function(data){
+                                return data.name+"问题"+"\n"+data.value;
+                            },
+                            textStyle: {
+                                fontSize: '14',
+                                fontWeight: 'normal',
+                                color: '#999'
+                            }
+                        }
+
+
+                    },
+                    labelLine: {
+                        normal: {
+                            show: true
+                        }
+                    },
+                    data:[
+                        {value:1000, name:'业务',itemStyle:{normal:{color:'#FE8279'}}},
+                        {value:1310, name:'人事',itemStyle:{normal:{color:'#FBCE73'}}},
+                        {value:2534, name:'财务',itemStyle:{normal:{color:'#A859F1'}}},
+                        {value:1535, name:'市场',itemStyle:{normal:{color:'#35A6F2'}}},
+                        {value:1548, name:'开发',itemStyle:{normal:{color:'#45DDEF'}}},
+                        {value:1548, name:'销售',itemStyle:{normal:{color:'#46D5D0'}}},
+                        {value:1548, name:'其他',itemStyle:{normal:{color:'#ABE672'}}}
+                    ]
+                }
+            ]
+       }
+
+        //图3-各支行问题处理概况
+        //图4-各部门/单位问题处理概况
+
+    </script>
+</head>
+<body>
+	<div style="display:table; border-spacing:10px;border: 1px solid #ccc;">
+		<div id="pie" style="height:500px; width:700px;display:table-cell"></div>
+	</div>
+</body>
+</html>

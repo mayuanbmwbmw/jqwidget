@@ -1,0 +1,22 @@
+/***************loading*************************/
+.mask_loading{
+	position:absolute;
+	z-index:10000;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=50);
+	opacity: 0.5;
+	background:#000;
+}
+.loading_img{
+	display:block;
+	background:url(images/load.gif);
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:45px;
+	height:45px;
+	border-width:0px;
+	border-style:none;
+	border:none;
+}

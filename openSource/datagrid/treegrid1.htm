@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>My First Grid</title>
+<link rel="stylesheet" type="text/css" media="screen" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="ui.jqgrid.css" />
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 75%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="grid.locale-cn.js" type="text/javascript"></script>
+<script src="jquery.jqGrid.src.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+   jQuery("#treegrid").jqGrid({  
+                treeGrid: true,  
+                treeGridModel: 'adjacency', //treeGrid模式，跟json元数据有关 ,adjacency/nested  
+                ExpandColumn : 'username',  
+                scroll: "true",  
+                url: 'data/tree1.json',  
+                datatype: 'json',  
+                colNames:['编号','姓名','密码','年龄','地址','出生日期'],  
+                colModel:[  
+                    {name:'id',index:'id', width:90,sorttype:"int"},  
+                    {name:'username',index:'username', width:110,sorttype:"int"},  
+                    {name:'password',index:'password', width:80},  
+                    {name:'age',index:'age', width:80},  
+                    {name:'address',index:'address', width:80},  
+                    {name:'time',index:'time', width:80,sorttype:"date"}  
+                ],  
+                pager: "false",  
+                sortname: 'id',  
+                sortorder: "desc",  
+  
+                jsonReader: {  
+                    root: "dataRows",  
+                    repeatitems : false  
+                },  
+                treeReader : {  
+                    level_field: "level",  
+                    parent_id_field: "parent",  
+                    leaf_field: "isLeaf",  
+                    expanded_field: "expanded"  
+                },  
+                caption: "jqGrid test",  
+                mtype: "POST",  
+                height: "auto",    // 设为具体数值则会根据实际记录数出现垂直滚动条  
+                rowNum : "-1",     // 显示全部记录  
+                shrinkToFit:false  // 控制水平滚动条  
+            });  
+
+   
+}); 
+
+</script>
+</head>
+<body>
+    <table id="treegrid"></table>  
+</body>	
+</html>

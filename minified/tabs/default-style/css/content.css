@@ -1,0 +1,104 @@
+/* CSS Document */
+.leftBorder{
+	font-size:1px;
+	position:relative;
+	float:left;
+	left:0px;
+	width:3px;
+	height:26px;
+}
+.leftBorder_normal{
+	background:#efefef;
+}
+.leftBorder_over{
+	background:#FFF18B;
+}
+.leftBorder_down{
+	background:#FF9900;
+}
+.contentInner{
+	padding: 0px;
+	line-height:14px;
+	height:26px;
+	position:relative;
+	float:left;
+}
+.contentInner_normal{
+	background:#efefef;
+}
+.contentInner_over{
+	background:#FFF18B;
+}
+.contentInner_down{
+	background:#FF9900;
+}
+.rightBorder{
+	font-size:1px;
+	position:relative;
+	float:left;
+	right:0px;
+	width:3px;
+	height:26px;
+}
+.rightBorder_normal{
+	background:#efefef;
+}
+.rightBorder_over{
+	background:#FFF18B;
+}
+.rightBorder_down{
+	background:#FF9900;
+}
+.zl_tabs{
+	position: relative;
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	line-height:0px;
+	font-size:12px;
+}
+.zl_tabs > ul > li a{
+	float: left; 
+	text-decoration:none;
+	height:100%;
+}
+.zl_tabs > ul{
+	width:100%;
+	padding:0px;
+	margin:0px;
+	display: inline-block;
+}
+.tabs_div{
+	width:100%;
+	border:0px;
+	padding:0px;
+	overflow:hidden;
+}
+.zl_tabs > ul > li{
+	display:inline;
+	cursor:pointer;
+	color:#122664;
+	border-bottom:0;
+	margin:0 5px 0 0;
+	padding:0px;
+	float:left;
+}
+.zl_tabs > ul > li span{
+	position:relative;
+	margin:10px;
+	top: 5px;
+	cursor:pointer;
+	color: #122664;
+}
+ul.tabs_parts{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	display: inline-block;
+}
+ul.tabs_parts li{
+	display:inline;
+}
+.zl_tabs div[class$="_c"]{
+	display:none;
+}

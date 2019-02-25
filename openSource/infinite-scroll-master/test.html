@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery瀑布流实例最流行瀑布流图片展示</title>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.infinitescroll.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.item{
+	width:700px;
+	height:25px;
+	margin:0 auto;	
+}
+.item.head{
+	background-color:#0066cc;
+	color:#fff;	
+}
+.item div{
+	float:left;	
+	text-align:center;
+	height:100%;
+}
+#more{display:block;margin:10px auto 20px;}
+</style>
+<script type="text/javascript">
+$(function(){
+
+	//var sp = 1
+	for(var i = 0;i<40;i++){
+		var item = '<div class="item">'+
+				'<div style="width:10%">'+i+'</div>'+
+				'<div style="width:20%">王五</div>'+
+				'<div style="width:10%">男</div>'+
+				'<div style="width:60%">天津市河西区</div>'+
+			'</div>'
+		$(item).appendTo(".item_list");
+	
+	}
+	
+	$(".infinite_scroll").infinitescroll({
+		navSelector  	: "#more",
+		nextSelector 	: "#more a",
+		itemSelector 	: ".item",
+		extraScrollPx   : 50,
+		dataType        : "html",//可以是json
+		loading:{
+			img: "images/masonry_loading_1.gif",
+			msgText: ' ',
+			finishedMsg: '木有了'
+			/*finished: function(){
+				sp++;
+				if(sp>=10){ //到第10页结束事件
+					$("#more").remove();
+					$("#infscr-loading").hide();
+					$("#page").show();
+					$(window).unbind('.infscr');
+				}
+			}	*/
+		},errorCallback:function(){
+			//$("#page").show();
+		}
+		
+	});
+
+});
+</script>
+</head>
+<body>
+<div>
+	<div class="item_list infinite_scroll">
+		<div class="item head">
+			<div style="width:10%">序号</div>
+            <div style="width:20%">姓名</div>
+            <div style="width:10%">性别</div>
+            <div style="width:60%">住址</div>
+		</div>
+	</div>
+	<div id="more"><a href="page/2.html"></a></div>
+</div>
+</body>
+</html>

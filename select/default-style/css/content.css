@@ -1,0 +1,74 @@
+﻿/* CSS Document */
+.zl_select .select-container {
+	background-color: #fff;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #aaa;
+/*	border-bottom: 0px;*/
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    line-height: 26px;
+    padding: 0 0 0 8px;
+    color: #444;
+    text-decoration: none;
+	outline:none;
+}
+
+.zl_select select{
+	display:none;
+}
+
+.select-drop{
+	position:absolute;
+	display:none;
+	border-width: 1px 1px 1px 1px;
+	border-color:#aaa;
+	border-style:solid;
+	height:auto;
+	background:#fff;
+	z-index:10000;
+	margin-top:-1px;
+	overflow-y:auto;
+}
+
+.select-drop ul.items{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+.select-drop ul.items li{
+	cursor:pointer;
+	word-warp: break-word;
+	word-break: break-all;/*Only work in IE*/ 
+}
+
+.select-drop ul.items li.over{
+	background:#eee;
+}
+
+.select-drop ul.items li.down{
+	background:#ccc;
+}
+
+.zl_select .select-container > div{
+	width:30px;
+	height:100%;
+	float:right;
+	clear:right;
+	background:url(../images/icon.png) no-repeat center;
+	position:absolute;
+	right:0px;
+	background-color:#fff;
+}
+
+.zl_select .select-container > span{
+	float:left;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap; 
+	text-align:left;
+}

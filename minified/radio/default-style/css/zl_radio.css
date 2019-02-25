@@ -1,0 +1,22 @@
+/* CSS Document */
+.zl_radio_normal{
+	background:url(../images/radio.png) no-repeat;
+	width:14px;
+	height:14px;
+	float:left;
+	cursor:pointer;
+}
+.zl_radio_down{
+	background:url(../images/radio_down.png) no-repeat;
+	width:14px;
+	height:14px;
+	float:left;
+	cursor:pointer;
+}
+.zl_radio input[type="radio"] {
+	filter: Alpha(opacity=0);
+	-moz-opacity:0; 
+	opacity:0;
+	padding:0px;
+	margin:0px;
+}

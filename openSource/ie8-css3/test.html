@@ -1,0 +1,84 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="PIE.js"></script>
+<![endif]-->
+<script>
+function pie(name, v){
+	// 如果没有加载 PIE 则直接终止
+	if (!$.browser.msie||!window.PIE) return false;
+	// 是否 jQuery 对象或者选择器名称
+	var obj = typeof name == 'object' ? name : $(name);
+	// 指定运行插件的 IE 浏览器版本
+	var version = 9;
+	// 未指定则默认使用 ie10 以下全兼容模式
+	if (typeof v != 'number' && v < 9) {
+		version = v;
+	}
+	// 可对指定的多个 jQuery 对象进行样式兼容
+	if ($.browser.msie && obj.size() > 0) {
+		if ($.browser.version*1 <= version*1) {
+			obj.each(function(){
+				PIE.attach(this);
+			});
+		}
+	}
+}
+$(function(){
+	pie($(".boxroundCorner"), 8);
+})
+</script>
+<style>
+.boxroundCorner {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #000;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 5px 5px 5px #999;
+	background-color: #fff;
+	position:relative;
+}
+.shu-line{
+	background-color: #fff;
+	box-shadow:1px 0 0 #ccc, 0 1px 0 white inset, 0 -1px 0 white inset;
+	position:relative;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+<div style="width:400px;height:200px;overflow:auto; ">
+<div style="overflow:hidden;position:relative; ">
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="shu-line" style="width:100px;height:30px;margin-top:30px;">sadasd</div>
+	
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+	<div class="boxroundCorner">
+	sadasdasd
+	</div>
+</div>
+</div>
+</body>
+</html>

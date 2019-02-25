@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Autocomplete - Default functionality</title>
+	<link rel="stylesheet" href="../../common/css/jquery-ui.min.css">
+	<script src="../../common/js/jquery-1.9.1.min.js"></script>
+	<script src="../../common/js/jquery.ui.core.min.js"></script>
+	<script src="../../common/js/jquery.ui.widget.min.js"></script>
+	<script src="../../common/js/jquery.ui.position.min.js"></script>
+	<script src="../../common/js/jquery.ui.menu.min.js"></script>
+	<script src="jquery.ui.autocomplete.js"></script>
+	<script>
+	$(function() {
+		var availableTags = [
+			{"label":"ActionScript","value":"1"},
+			{"label":"AppleScript","value":"2"},
+			{"label":"Asp","value":"3"},
+			{"label":"BASIC","value":"4"}
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags,
+			emptyFocus:function(){
+			},
+			focus: function( event, ui ) {
+				$( ".ui-widget :text").val( ui.item.label );
+				return false;
+			},
+			select: function( event, ui ) {
+				$( ".ui-widget :text").val( ui.item.label );
+				$( "#tags-id" ).val( ui.item.value );
+				return false;
+			},
+			defaultData: [{"label":"aa","value":"aa"},{"label":"bb","value":"bb"},{"label":"cc","value":"cc"}]
+		});
+	});
+	</script>
+</head>
+<body>
+
+<div class="ui-widget">
+	<label for="tags">Tags: </label>
+	<input id="tags">
+	<input type="hidden" id="tags-id">	
+</div>
+</body>
+</html>

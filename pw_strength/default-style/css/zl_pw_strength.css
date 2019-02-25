@@ -1,0 +1,45 @@
+﻿/* CSS Document */
+.pw_strength{
+	width:100%;
+	height:100%;
+}
+.pw_strength_text{
+	width:100%;
+	height:100%;
+	height:20px;
+	width:auto;
+	text-align:center;
+}
+.pw_strength_color{
+	width:auto;
+	height:8px;
+	background: #d2d2d2;
+	border-radius:4px 4px 4px 4px;
+}
+.pw_strength .pw_bg{
+	width:95px;
+	height:8px;
+	float:left;
+}
+.pw_strength .pw_four_radius{
+	border-radius:4px 4px 4px 4px;
+}
+.pw_strength .pw_left_radius{
+	border-radius:4px 0px 0px 4px;
+}
+.pw_strength .pw_right_radius{
+	border-radius:0px 4px 4px 0px;
+}
+.pw_lower_color{
+	background:#E74c3c;
+}
+.pw_middle_color{
+	background:#3993bf;
+}
+.pw_strong_color{
+	background:#16a085;
+}
+.pw_level_text{
+	width:95px;
+	float:left;
+}

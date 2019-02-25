@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page0,.page1,.page2{
+	padding:20px;
+}
+
+/*---------------------page0 style begin-------------------------*/
+
+.page0 a,.page0 span{
+	padding:2px 8px;
+	display:inline-block;
+	border:1px solid #ddd;
+	line-height:16px;
+	margin:0 3px;
+}
+.page0 a:hover,.page0 .on{
+	text-decoration:none;
+	background:#C40000;
+	color:#fff;
+	border:1px solid #9F0000;
+}
+.page0 span{
+	border:1px solid #ddd;
+	color:#ddd;
+}
+
+/*---------------------page0 style end-------------------------*/
+
+/*---------------------page1 style begin-------------------------*/
+
+.page1 a,.page1 span{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	border:1px solid #ddd;
+	line-height:20px;
+	text-align:center;
+	border-radius:15px;
+	margin:0 3px;
+}
+.page1 a:hover,.page1 .on{
+	text-decoration:none;
+	background:#C40000;
+	color:#fff;
+	border:1px solid #9F0000;
+}
+.page1 .pre,.page1 .next,.page1 span{
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	background:#f7f7f7;
+}
+.page1 span{
+	border:1px solid #ddd;
+	color:#ddd;
+}
+
+/*---------------------page1 style end-------------------------*/
+
+/*---------------------page2 style begin-------------------------*/
+
+.page2_box{
+	display:inline-block;
+	background:#C40000;
+	padding:8px 20px;
+	border-radius:20px;
+	color:#fff;
+}
+.page2 a,.page2 span{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	line-height:20px;
+	text-align:center;
+	margin:0 3px;
+	color:#fff;
+	display:block;
+	float:left;
+}
+.page2 a:hover,.page2 .on{
+	text-decoration:none;
+	color: #FF0;
+	
+}
+.page2 .pre,.page2 .next,.page2 span{
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	background:#f7f7f7;
+	border-radius:15px;
+	border:1px solid #ddd;
+	color:#333;
+	width:20px;
+	height:20px;
+	float:left;
+}
+.page2 span{
+	border:1px solid #ddd;
+	color:#bdbdbd;
+}
+.page2 i{
+	display:block;
+	float:left;
+}
+
+/*---------------------page2 style end-------------------------*/
+
+
+

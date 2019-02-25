@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>validation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-size: 85%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="echarts-all.js"></script>
+<script type="text/javascript">
+option = {
+    tooltip : {
+        trigger: 'item'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataZoom : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    dataRange: {
+        min: 0,
+        max: 100,
+        y: 'center',
+        text:['高','低'],           // 文本，默认为数值文本
+        color:['lightgreen','yellow'],
+        calculable : true
+    },
+    xAxis : [
+        {
+            type : 'value',
+            scale : true
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position:'right',
+            scale : true
+        }
+    ],
+    animation: false,
+    series : [
+        {
+            name:'scatter1',
+            type:'scatter',
+            symbolSize:5,
+            data: (function () {
+                var d = [];
+                var len = 500;
+                var value;
+                while (len--) {
+                    value = (Math.random()*100).toFixed(2) - 0;
+                    d.push([
+                        (Math.random()*value + value).toFixed(2) - 0,
+                        (Math.random()*value).toFixed(2) - 0,
+                        value
+                    ]);
+                }
+                return d;
+            })()
+        }
+    ]
+};
+                    
+$(function(){
+	var chart = echarts.init(document.getElementById("Chart"));
+	chart.setOption(option);
+})
+</script>
+<style>
+
+</style>
+</head>
+<body>
+	<div style="display:table; border-spacing:10px;border: 1px solid #ccc;">
+		<div id="Chart" style="height:500px; width:700px;display:table-cell"></div>
+	</div>
+</body>
+</html>

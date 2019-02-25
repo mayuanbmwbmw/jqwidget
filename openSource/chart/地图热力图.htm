@@ -1,0 +1,146 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>validation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-size: 85%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="dist/echarts.js"></script>
+<script type="text/javascript">   
+var chart;    
+var geoCoordMap = {
+    "南开区":[117.164143,39.120474],
+    "红桥区":[117.163301,39.175066],
+    "河西区":[117.217536,39.101897],
+    "河东区":[117.226568,39.122125]
+
+};
+var convertData = function (data) {
+    var res = [];
+    for (var i = 0; i < data.length; i++) {
+        var geoCoord = geoCoordMap[data[i].name];
+        if (geoCoord) {
+            res.push(geoCoord.concat(data[i].value));
+        }
+    }
+    return res;
+};
+$(function(){
+	drawMap();
+})
+
+function drawMap(){
+	
+	require.config({
+            paths: {
+                echarts: './dist'
+            }
+        });
+require(
+            [
+                'echarts',
+                'echarts/chart/heatmap',
+                'echarts/chart/map'
+            ],
+            
+            function(ec){
+            	$.getJSON('tianjin.json',function (taiyuanJson) {
+    	ec.registerMap('tianjin', taiyuanJson);
+    	chart = ec.init(document.getElementById('main'));
+    	chart.setOption({
+    		 visualMap: {
+		        min: 0,
+		        max: 500,
+		        splitNumber: 5,
+		        inRange: {
+		            color: ['#d94e5d','#eac736','#50a3ba'].reverse()
+		        },
+		        textStyle: {
+		            color: '#fff'
+		        }
+		    },
+		    geo: {
+		        map: 'tianjin',
+		        label: {
+		            emphasis: {
+		                show: false
+		            }
+		        },
+		        roam: true,
+		        itemStyle: {
+		            normal: {
+		                areaColor: '#323c48',
+		                borderColor: '#111'
+		            },
+		            emphasis: {
+		                areaColor: '#2a333d'
+		            }
+		        }
+		    },
+        	series: [{
+        		roam: true,
+            	type: 'heatmap',
+            	map: 'tianjin',
+            	coordinateSystem: 'geo',
+				selectedMode:'single',  
+				data: convertData([
+		            {name: "南开区", value: 9},
+		            {name: "红桥区", value: 12},
+		            {name: "河西区", value: 12},
+		            {name: "河东区", value: 12}
+		        ]),
+				
+				 label: {
+                        normal: {
+                            show: true,//显示省份标签
+                            textStyle:{color:"#b16321"}//省份标签字体颜色
+                        },
+                        emphasis: {//对应的鼠标悬浮效果
+                            show: true,
+                            textStyle:{color:"#ffffff"}
+                        } 
+                    },
+				 itemStyle: {
+                        normal: {
+                            borderWidth: 2,//区域边框宽度
+                            borderColor: '#ffffff',//区域边框颜色
+                            areaColor:"#FFF5E8",//区域颜色
+							label:{show:true}
+                        },
+                        emphasis: {
+                            borderWidth: 2,
+                            borderColor: '#ffffff',
+                            areaColor:"#F9C284",
+							label:{show:true}
+                        }
+                    }
+        	}]
+    	});
+		chart.on("click",function(param){
+			alert(param.name);
+		})
+		});
+            	
+            	
+           })
+	
+
+}
+
+</script>
+<style>
+
+</style>
+</head>
+<body>
+	<div id="main" style="width:800px;height:800px "></div>
+</body>
+</html>

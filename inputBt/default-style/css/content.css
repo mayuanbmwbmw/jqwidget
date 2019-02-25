@@ -1,0 +1,42 @@
+﻿/* CSS Document */
+.inputBt .select-container {
+	background-color: #fff;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #aaa;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    line-height: 26px;
+    padding: 0 0 0 8px;
+    color: #444;
+    text-decoration: none;
+}
+
+.inputBt .select-container > div{
+	width:30px;
+	height:100%;
+	float:right;
+	clear:right;
+	position:absolute;
+	right:0px;
+	background-color:#fff;
+	font-size:12px;
+	text-align: center;
+}
+.inputBt .select-container > div.icon{
+	background:url(../images/clean.png) no-repeat center;
+}
+.inputBt .select-container > input{
+	float:left;
+	overflow: hidden;
+	white-space: nowrap; 
+	text-align:left;
+	border:0px;
+	padding: 0px;
+	margin:0px;
+	line-height:30px;
+	outline: none;
+}

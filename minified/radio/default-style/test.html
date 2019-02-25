@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/zl_radio.css">
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.zl_radio.min.js"></script>
+<title></title>
+<style>
+.ul_style{
+	list-style:none;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+}
+.ul_style li{
+	list-style:none;
+	display:inline;
+	float:left;
+}
+.all_account{
+	float:left;
+	clear:left;
+}
+.all_sonaccount{
+	float:left;
+	margin-left:20px;
+}
+.all_account span{
+	margin-top:3px;
+	margin-left:5px;
+	float:left;
+}
+.all_sonaccount span{
+	margin-top:3px;
+	margin-left:5px;
+	float:left;
+}
+</style>
+<script>
+$(function(){
+	$(".zl_radio").zl_radio();
+})
+</script>
+</head>
+<body>
+<ul class="ul_style">
+	<li>所在机房：</li>
+	<li>
+		<div class="all_account">
+			<div class="zl_radio zl_radio_normal" name="account_type">
+				<input id="aa"  type="radio" name="account_type_rad"  value="1" />
+			</div><span>全部账户</span>
+		</div>
+		<div class="all_sonaccount">
+			<div class="zl_radio zl_radio_down" name="account_type">
+				<input id="b" type="radio" name="account_type_rad" checked value="2" />
+			</div><span>仅子账户</span>
+		</div>
+	</li>
+</ul>
+</body>
+</html>

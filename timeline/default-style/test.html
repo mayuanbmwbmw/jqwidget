@@ -1,0 +1,334 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/jquery.timeline.css">
+    <script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+    <script src="../../common/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timeline.js"></script>
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(window).resize((function() {
+                var wh = $(window).height();
+                $(".details").height(wh);
+                return arguments.callee;
+            })());
+            $("#basicmsg1").timeline();
+        })
+    </script>
+</head>
+<body>
+<div class="timeline">
+    <ul class="dates">
+        <li class="focus" data-click="true">基本信息1</li>
+        <li class="focus" data-click="true">基本信息2</li>
+        <li class="focus" data-click="true">基本信息3</li>
+        <li class="focus" data-click="true">基本信息4</li>
+        <li class="focus" data-click="true">基本信息5</li>
+    </ul>
+</div>
+<div id="dataView" class="operatediv">
+    <div class="details">
+        <!-- 基本信息 -->
+        <div class="detail" id="basicmsg1">
+            1
+            <div class="item">
+                <label class="itemLabel">主键ID：</label>
+                <label class="itemContentLabel" name="vehicleId" data-name="vehicleId">3FA8F9FC-96AB-47ED-BD77-1478F9D162FE</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">车牌号：</label>
+                <label class="itemContentLabel" name="licensePlateNO" data-name="licensePlateNO">湘HC6370</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">车牌颜色：</label>
+                <label class="itemContentLabel" name="licensePlateColor" data-name="licensePlateColor">蓝色</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">道路运输证号：</label>
+                <label class="itemContentLabel" name="roadTransportCertificateNO"
+                       data-name="roadTransportCertificateNO">430900000706</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">车辆吨位：</label>
+                <label class="itemContentLabel" name="vehicleTonnage" data-name="vehicleTonnage">1</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">发证时间：</label>
+                <label class="itemContentLabel" name="certificationTime" data-name="certificationTime">2013-04-25
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经营范围：</label>
+                <label class="itemContentLabel" name="businessScope" data-name="businessScope">普通货运,危险货物运输（1类1项）</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">车辆类别ID：</label>
+                <label class="itemContentLabel" name="vehicleType" data-name="vehicleType">1</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">车辆类别：</label>
+                <label class="itemContentLabel" name="vehicleName" data-name="vehicleName">货车</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">使用类别ID：</label>
+                <label class="itemContentLabel" name="useType" data-name="useType">31</label>
+            </div>
+        </div>
+
+        <div class="detail">
+            2
+            <div class="item">
+                <label class="itemLabel">使用类别：</label>
+                <label class="itemContentLabel" name="useTypeName" data-name="useTypeName">轻型厢式货车</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">审验日期：</label>
+                <label class="itemContentLabel" name="verificationTime" data-name="verificationTime">2014-04-24
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">审验结果：</label>
+                <label class="itemContentLabel" name="verificationResult" data-name="verificationResult">合格</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">技术等级：</label>
+                <label class="itemContentLabel" name="technicalGrade" data-name="technicalGrade">一级车</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">技术等级评定日期：</label>
+                <label class="itemContentLabel" name="technicalGradeVerificationTime"
+                       data-name="technicalGradeVerificationTime">2014-04-21 00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">质量考核日期：</label>
+                <label class="itemContentLabel" name="qualityAssessmentTime" data-name="qualityAssessmentTime">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">本次二维日期：</label>
+                <label class="itemContentLabel" name="curSecondRepairTime" data-name="curSecondRepairTime">2014-04-23
+                    00:00:00</label>
+            </div>
+        </div>
+
+        <div class="detail">
+            3
+            <div class="item">
+                <label class="itemLabel">下次二维日期：</label>
+                <label class="itemContentLabel" name="nextSecondRepairTime" data-name="nextSecondRepairTime">2014-07-23
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">本次大修日期：</label>
+                <label class="itemContentLabel" name="curLargeRepairTime" data-name="curLargeRepairTime">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">厂牌型号：</label>
+                <label class="itemContentLabel" name="factoryPlateModel"
+                       data-name="factoryPlateModel">红宇HYJ5040XQY5</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">承运人责任险：</label>
+                <label class="itemContentLabel" name="carrierInsurance" data-name="carrierInsurance">是</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险单号：</label>
+                <label class="itemContentLabel" name="insuranceNum"
+                       data-name="insuranceNum">'ACHSU8245414Q000065C</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险期起：</label>
+                <label class="itemContentLabel" name="insuranceTimeStart" data-name="insuranceTimeStart">2014-04-26
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险期止：</label>
+                <label class="itemContentLabel" name="insuranceTimeEnd" data-name="insuranceTimeEnd">2015-04-25
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险金额：</label>
+                <label class="itemContentLabel" name="insuranceMoney" data-name="insuranceMoney">1900</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险签单日期：</label>
+                <label class="itemContentLabel" name="insuranceIssueDate" data-name="insuranceIssueDate">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属地区：</label>
+                <label class="itemContentLabel" name="belongArea" data-name="belongArea">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属县所：</label>
+                <label class="itemContentLabel" name="belongCounty" data-name="belongCounty">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险期止：</label>
+                <label class="itemContentLabel" name="insuranceTimeEnd" data-name="insuranceTimeEnd">2015-04-25
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险金额：</label>
+                <label class="itemContentLabel" name="insuranceMoney" data-name="insuranceMoney">1900</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险签单日期：</label>
+                <label class="itemContentLabel" name="insuranceIssueDate" data-name="insuranceIssueDate">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属地区：</label>
+                <label class="itemContentLabel" name="belongArea" data-name="belongArea">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属县所：</label>
+                <label class="itemContentLabel" name="belongCounty" data-name="belongCounty">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险期止：</label>
+                <label class="itemContentLabel" name="insuranceTimeEnd" data-name="insuranceTimeEnd">2015-04-25
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险金额：</label>
+                <label class="itemContentLabel" name="insuranceMoney" data-name="insuranceMoney">1900</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险签单日期：</label>
+                <label class="itemContentLabel" name="insuranceIssueDate" data-name="insuranceIssueDate">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属地区：</label>
+                <label class="itemContentLabel" name="belongArea" data-name="belongArea">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属县所：</label>
+                <label class="itemContentLabel" name="belongCounty" data-name="belongCounty">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险期止：</label>
+                <label class="itemContentLabel" name="insuranceTimeEnd" data-name="insuranceTimeEnd">2015-04-25
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险金额：</label>
+                <label class="itemContentLabel" name="insuranceMoney" data-name="insuranceMoney">1900</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">保险签单日期：</label>
+                <label class="itemContentLabel" name="insuranceIssueDate" data-name="insuranceIssueDate">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属地区：</label>
+                <label class="itemContentLabel" name="belongArea" data-name="belongArea">益阳市</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属县所：</label>
+                <label class="itemContentLabel" name="belongCounty" data-name="belongCounty">益阳市</label>
+            </div>
+        </div>
+
+        <div class="detail">
+            4
+            <div class="item">
+                <label class="itemLabel">业户名称：</label>
+                <label class="itemContentLabel" name="ownerName" data-name="ownerName">安化县供销社运输服务公司</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经济类型：</label>
+                <label class="itemContentLabel" name="economyType" data-name="economyType">7</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经济类型名称：</label>
+                <label class="itemContentLabel" name="economyTypeName" data-name="economyTypeName">集体</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">发动机号：</label>
+                <label class="itemContentLabel" name="engineNumber" data-name="engineNumber">9C110737</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">底盘号：</label>
+                <label class="itemContentLabel" name="chassisNumber" data-name="chassisNumber">LEFYECG2X9HN48469</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">出厂日期：</label>
+                <label class="itemContentLabel" name="exFactoryDate" data-name="exFactoryDate">2010-02-21
+                    00:00:00</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">燃料类型ID：</label>
+                <label class="itemContentLabel" name="fuelType" data-name="fuelType">1</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">燃料类型：</label>
+                <label class="itemContentLabel" name="fuelTypeName" data-name="fuelTypeName">柴油</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">承保公司名称：</label>
+                <label class="itemContentLabel" name="insuranceCompany" data-name="insuranceCompany">太平洋产险</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">质量考核结果：</label>
+                <label class="itemContentLabel" name="qualityAssessmentResult"
+                       data-name="qualityAssessmentResult">AAA</label>
+            </div>
+        </div>
+
+        <div class="detail">
+            5
+            <div class="item">
+                <label class="itemLabel">所属公司ID：</label>
+                <label class="itemContentLabel" name="companyId" data-name="companyId">CAF577D1-9415-4552-A63C-BE668BB71D23</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">所属公司名称：</label>
+                <label class="itemContentLabel" name="companyName" data-name="companyName">安化县供销社运输服务公司</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经度：</label>
+                <label class="itemContentLabel" name="longitude" data-name="longitude">406303245</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">纬度：</label>
+                <label class="itemContentLabel" name="latitude" data-name="latitude">102043864</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">联系电话：</label>
+                <label class="itemContentLabel" name="contactTelephone" data-name="contactTelephone">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经度：</label>
+                <label class="itemContentLabel" name="longitude" data-name="longitude">406303245</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">纬度：</label>
+                <label class="itemContentLabel" name="latitude" data-name="latitude">102043864</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">联系电话：</label>
+                <label class="itemContentLabel" name="contactTelephone" data-name="contactTelephone">无</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">经度：</label>
+                <label class="itemContentLabel" name="longitude" data-name="longitude">406303245</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">纬度：</label>
+                <label class="itemContentLabel" name="latitude" data-name="latitude">102043864</label>
+            </div>
+            <div class="item">
+                <label class="itemLabel">联系电话：</label>
+                <label class="itemContentLabel" name="contactTelephone" data-name="contactTelephone">无</label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

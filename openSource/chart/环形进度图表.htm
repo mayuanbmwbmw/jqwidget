@@ -1,0 +1,193 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>validation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-size: 85%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="dist/echarts.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var imgUrl = null;
+        require.config({
+              paths:{ 
+                 echarts: "dist",
+                }
+        });
+    // 作为入口
+    require(
+        [
+            'echarts',
+            'echarts/chart/pie'//引入需要的jar包//echarts是require中定义的变量。
+        ],  
+		myPieChart
+    	
+    );
+
+
+ var echarts;
+    var pieChart;
+function myPieChart(ec) {
+    //柱状图
+    echarts = ec;
+    var a =document.getElementById('pie');
+    var pieChart = ec.init(a);      
+    var pieChartOtion = getPieChartOption("70","40","80","1","主机CPU(3.0Hz)",""); 
+    pieChart.setOption(pieChartOtion);
+    imgUrl = encodeURIComponent(pieChart.getDataURL());
+}   
+    //获得bar图的选项和数据
+    function getPieChartOption(a,b,c,graphStyleA,MainTitle,newbiaoti){//从后台传过来的参数
+        var labelTop = {//上层样式
+                normal : {
+                    color :'#cccccc',
+                    label : {
+                        show : true,
+                        position : 'center',
+                        formatter : '{b}',
+                        textStyle: {
+                            baseline : 'bottom'
+                        }
+                    },
+                    labelLine : {
+                        show : false
+                    }
+                }
+            };
+          var labelFromatter = {//环内样式
+            normal : {//默认样式
+                label : {//标签
+                    formatter : '{c}%',
+                   // labelLine.length：30,  //线长，从外边缘起计算，可为负值
+                    textStyle: {//标签文本样式
+                        color:'black',
+                        align :'center',
+                        baseline : 'top'//垂直对其方式
+                    }
+                }
+            },
+          };
+        var labelBottom = {//底层样式
+            normal : {
+                color: '#00C9C7',
+                label : {
+                    show : true,
+                    position : 'center'
+                },
+                labelLine : {
+                    show : false
+                }
+            },
+            emphasis: {//悬浮式样式
+                color: 'rgba( 0,0,0,0)'
+            }
+        };
+        var radius = [42,49];// 半径[内半径，外半径]
+
+    var pieChartOption = {
+        title : {
+                text: MainTitle,
+                subtext: newbiaoti,     
+                    x:'center',
+					y:'bottom',
+                    //正标题样式
+                    textStyle: {
+                          fontSize:12,
+                          fontFamily:'Arial',
+                          fontWeight:100,
+                          //color:'#1a4eb0',
+                    },
+                    //副标题样式
+                    subtextStyle: {
+                          fontSize:12,
+                          fontFamily:'Arial',
+                          color:"#1a4eb0",  
+                        },
+        },
+        animation:false,
+        /*tooltip : {         // 提示框. Can be overwrited by series or data
+            trigger: 'axis',
+            //show: true,   //default true
+            showDelay: 0,
+            hideDelay: 50,
+            transitionDuration:0,
+            borderRadius : 8,
+            borderWidth: 2,
+            padding: 10,    // [5, 10, 15, 20]
+        },*/
+        series : [
+            {
+                type : 'pie',
+                center : ['10%', '40%'],//圆心坐标（div中的%比例）
+                radius : radius,//半径
+                x: '0%', // for funnel
+                itemStyle : graphStyleA=='labelTop'?labelTop:labelFromatter,//graphStyleA,//图形样式 // 当查到的数据不存在（并非为0），此属性隐藏
+                data : [
+                    {name:'', value:a,itemStyle : labelTop},
+                    {name:'', value:100-(a*1), itemStyle : labelBottom}
+                ]
+            },
+			 {
+                type : 'pie',
+                center : ['30%', '40%'],//圆心坐标（div中的%比例）
+                radius : radius,//半径
+                x: '0%', // for funnel
+                itemStyle : graphStyleA=='labelTop'?labelTop:labelFromatter,//graphStyleA,//图形样式 // 当查到的数据不存在（并非为0），此属性隐藏
+                data : [
+                    {name:'', value:b,itemStyle : labelTop},
+                    {name:'', value:100-(b*1), itemStyle : labelBottom}
+                ]
+            },
+			{
+                type : 'pie',
+                center : ['50%', '40%'],//圆心坐标（div中的%比例）
+                radius : radius,//半径
+                x: '0%', // for funnel
+                itemStyle : graphStyleA=='labelTop'?labelTop:labelFromatter,//graphStyleA,//图形样式 // 当查到的数据不存在（并非为0），此属性隐藏
+                data : [
+                    {name:'', value:c,itemStyle : labelTop},
+                    {name:'', value:100-(c*1), itemStyle : labelBottom}
+                ]
+            }   
+        ]
+
+};
+return pieChartOption;
+}
+/*
+function myPieChart2(a,b,c,d,e,aSla,fSla,sSla,graphStyleA,graphStyleB,graphStyleC,graphStyleD,graphStyleE,MainTitle,newbiaoti) {
+    a = a.replaceAll('"','');
+    b = b.replaceAll('"','');
+    c = c.replaceAll('"','');
+    d = d.replaceAll('"','');
+    e = e.replaceAll('"','');
+    graphStyleA = graphStyleA.replaceAll('"','');
+    graphStyleB = graphStyleB.replaceAll('"','');
+    graphStyleC = graphStyleC.replaceAll('"','');
+    graphStyleD = graphStyleD.replaceAll('"','');
+    graphStyleE = graphStyleE.replaceAll('"','');
+    //柱状图
+    var asd =document.getElementById('pie');
+    var pieChart = echarts.init(asd);       
+    var pieChartOtion = getPieChartOption(a,b,c,d,e,aSla,fSla,sSla,graphStyleA,graphStyleB,graphStyleC,graphStyleD,graphStyleE,MainTitle,newbiaoti);    
+    pieChart.setOption(pieChartOtion);
+    imgUrl = encodeURIComponent(pieChart.getDataURL());
+}
+String.prototype.replaceAll = function(s1,s2){
+    return this.replace(new RegExp(s1,"gm"),s2);
+};*/
+</script>   
+</head>
+<body>
+	<div style="display:table; border-spacing:10px;border: 1px solid #ccc;">
+		<div id="pie" style="height:150px; width:700px;display:table-cell"></div>
+	</div>
+</body>
+</html>

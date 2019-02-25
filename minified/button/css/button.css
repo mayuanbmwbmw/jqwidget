@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+.button a{
+	padding:10px 30px;
+	background:#0080C0;
+	border-radius:8px;
+	display:inline-block;
+	color:#fff;
+	font-size:14px;
+}.button a:hover{
+	background: #00A7F7;
+	text-decoration:none;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" type="text/ecmascript" src="../common/js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery_popup.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn").popup({
+		   Width:200,
+		   Height:100,
+		   Opacity:0.2
+		});
+	
+	$("#btn2").popup({
+			Title_text:"用户注册",
+			Box_class:"bb",
+			Title_class:"tit",
+			Data_form:"[{name_id:'用户名',type:'text','class':'a1',nub:'1'},{name_id:'密　码',type:'password','class':'a1',nub:'1'},{name_id:'籍　贯',type:'checkbox','class':'a1',nub:'3',text:'天津'},{name_id:'性　别',type:'radio','class':'a1',nub:'4'},{name_id:'照　片',type:'file','class':'a1',nub:'1'},{name_id:'备　注',type:'radio','class':'a2',nub:'2'}]"
+		  });
+		  	 
+	$("#btn3").popup({
+		    Title_text:"详细内容",
+			Class:"bb",
+			Background_color:"#CCC",
+			Shade:false,
+			Title_class:"tit",
+			Data_text:"[{text:'这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字'},{text:'这是第二段文字这是第二段文字这是第二段文字这是第二段文字这是第二段文字这是第二段文字'},{text:'这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字'},{text:'这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字这是第一段文字'}]"
+		  });		
+		  
+	$("#btn4").popup({
+			Title_text:"表格数据",
+			Class:"bb",
+		    Z_zc:false,
+			Title_class:"tit",
+			Data_table_th:"[{th_id:'姓名'},{th_id:'性别'},{th_id:'年龄'},{th_id:'籍贯'}]",
+			Data_table_td:"[[{td_text:'张三'},{td_text:'男'},{td_text:'14'},{td_text:'天津'}],[{td_text:'张三'},{td_text:'男'},{td_text:'14'},{td_text:'天津'}],[{td_text:'张三'},{td_text:'男'},{td_text:'14'},{td_text:'天津'}],[{td_text:'张三'},{td_text:'男'},{td_text:'14'},{td_text:'天津'}]]"
+		});
+		
+	$("#btn5").popup({
+		Title_text:"URL数据",
+		Data_url:"\"b.html\""
+		});	  
+		
+	$("#btn6").popup({
+		Title_text:"对象数据",
+		Data_id:"abc"
+		});		     
+	})
+</script>
+</head>
+<style>
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	}
+.aa{
+	border-radius:10px;
+	background-color:#9C3;
+	}
+.bb{
+	border-radius:4px;
+	box-shadow:2px 2px 5px 2px #000;
+	background-color:#CCC;
+/*	height:200px !important;*/
+	}
+.tit{
+	color:#FFF;
+	background-color:#CC0;
+	border-radius:4px 4px 0 0;
+	}
+.a1{
+	width:100%;
+	margin-bottom:10px;
+	float:left;
+	line-height:20px;
+	}
+.a1 span,.a2 span{
+	float:left;
+	margin-right:5px;
+	line-height:20px;
+	min-width:60px;
+	text-align:right;
+	}
+.a1 input[type="radio"]{
+	float:left;
+	margin-top:3px;
+	margin-left:3px;
+	margin-right:15px;
+	cursor:pointer;
+	}
+.a1 label{
+	float:left;
+	cursor:pointer;
+	}		
+.a1 input[type="text"],.a1 input[type="password"]{
+	float:left;
+	border:1px solid #999;
+	height:20px;
+	line-height:20px;
+	padding:0 5px;
+	}		
+.a2{
+	width:100%;
+	margin-bottom:10px;
+	float:left;
+	line-height:20px;
+	}
+.a2 textarea{
+	float:left;
+	border:1px solid #999;
+	overflow:auto;
+	width:200px;
+	padding:5px;	
+	}
+.box{
+	overflow:hidden;
+	background-color:#000;
+	padding:10px;
+	}
+.as{
+	float:left;
+	width:30px;
+	border-size:border-box;
+	height:30px;
+	background-color:#CCC;
+	margin:10px;
+	color:#FFF;
+	text-align:center;
+	line-height:30px;
+	}
+.wd{
+	width:60%;
+	overflow:hidden;
+	}										
+</style>
+<body>
+<button id="btn">默认带遮罩层</button>
+<button id="btn2">表单列表数据</button>
+<button id="btn3">文本不带遮罩</button>
+<button id="btn4">表格数据弹出</button>
+<button id="btn5">url数据弹出</button>
+<button id="btn6">对象数据弹出</button>
+<div id="abc" style="display:none"><a href="http://www.baidu.com" target="_blank">百度</a>hello!</div>
+</body>
+</html>

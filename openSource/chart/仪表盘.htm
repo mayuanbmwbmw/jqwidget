@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>validation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-size: 85%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="echarts-all.js"></script>
+<script type="text/javascript">
+option = {
+    tooltip : {
+        formatter: "{a} <br/>{b} : {c}%"
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    series : [
+        {
+            name:'业务指标',
+            type:'gauge',
+            detail : {formatter:'{value}%'},
+            data:[{value: 50, name: '完成率'}]
+        }
+    ]
+};
+var timeTicket,chart;
+clearInterval(timeTicket);
+timeTicket = setInterval(function (){
+    option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
+    chart.setOption(option, true);
+},2000);
+                    
+$(function(){
+	chart = echarts.init(document.getElementById("Chart"));
+	chart.setOption(option);
+})
+</script>
+<style>
+
+</style>
+</head>
+<body>
+	<div style="display:table; border-spacing:10px;border: 1px solid #ccc;">
+		<div id="Chart" style="height:500px; width:700px;display:table-cell"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../../radio/default-style/css/zl_radio_u1.css">
+<link rel="stylesheet" type="text/css" href="../../search/default-style/css/content.css">
+<link rel="stylesheet" type="text/css" href="css/zl_organize.css">
+<link rel="stylesheet" type="text/css" href="../../active_input/css/content.css">
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../radio/default-style/js/jquery.zl_radio_u1.js"></script>
+<script type="text/javascript" src="../../search/default-style/js/jquery.search.js"></script>
+<script type="text/javascript" src="js/jquery.organize.js"></script>
+<script type="text/javascript" src="../../active_input/js/jquery.zl_active_input.js"></script>
+<title></title>
+<script>
+$(function(){
+	$(".zl_radio").zl_radio();
+	$(".input-person-search").searchStyle({
+		hasClose: true,
+		hasEnter: true,
+		enterCallback: function(text){
+			console.log(text);
+		}
+	});
+	$(".a").zl_organize({
+		data: [{"name":"市场运营部","levelSe":"0","levelId":"1","childs":[{"name":"李明","levelSe":"0-1","levelId":"11","childs":[]},{"name":"小红","levelSe":"0-2","levelId":"12","childs":[]},{"name":"王桐","levelSe":"0-3","levelId":"13","childs":[]},{"name":"李明乐","levelSe":"0-4","levelId":"14","childs":[]},{"name":"王军","levelSe":"0-5","levelId":"15","childs":[]}]},
+			{"name":"人力资源部","levelSe":"1","levelId":"2","childs":[{"name":"刘强","levelSe":"1-1","levelId":"21","childs":[]},{"name":"朴毅","levelSe":"1-2","levelId":"22","childs":[]}]},
+			{"name":"销售部","levelSe":"2","levelId":"3","childs":[{"name":"马上","levelSe":"2-1","levelId":"31","childs":[]}]},
+			{"name":"科技部","levelSe":"3","levelId":"4","childs":[{"name":"研发室","levelSe":"3-1","levelId":"41","childs":[{"name":"徐力","levelSe":"3-1-1","levelId":"411","childs":[]},{"name":"马翔","levelSe":"3-1-2","levelId":"412","childs":[]}]},{"name":"郭晶","levelSe":"3-2","levelId":"42","childs":[]},{"name":"郭小晶","levelSe":"3-3","levelId":"43","childs":[]}]}
+			],
+		o: "orgainzes"	
+	});
+})
+</script>
+<style>
+body {font-size:12px;}	
+.zl_radio input.mg-all-l-5[type="radio"] {
+    margin: 0 5px 0;
+}
+.search-wrapper .div_forms{
+	border: 0;
+}
+</style>
+</head>
+<body>
+<div class="organize-wrapper">
+	<!--左-->
+	<div class="organize-left">
+		<!--查询类别-->
+		<ul class="filter-wrapper">
+			<li>
+				<div class="zl_radio zl_radio_normal" name="account_type">
+					<input id="aa" class="mg-all-l-5" type="radio" name="account_type_rad" checked="checked"  value="1" />
+					<label for="aa">按部门查看</label>
+				</div>
+			</li>
+			<li>
+				<div class="zl_radio zl_radio_down" name="account_type">
+					<input id="b" class="mg-all-l-5"  type="radio" name="account_type_rad" value="2" />
+					<label for="b">按职务查看</label>
+				</div>
+			</li>
+		</ul>
+		<!--搜索区域-->
+		<div class="search-wrapper"><div class="search-icon"></div><input type="text" msg="请输入姓名查询" class="input-person-search forms_default_style" style="width:165px;height:18px;"/></div>
+		<!--组织层级选择-->
+		<div class="level-wrapper">
+			<ul class="a"></ul>
+		</div>
+	</div>
+	<!--中-->
+	<div class="organize-middle"></div>
+	<!--右-->
+	<div class="organize-right">
+		<!--操作区域-->
+		<ul class="operations-wrapper">
+			<li>
+				已选择<span class="items-numbers"></span>
+			</li>
+			<li class="operations">
+				<div class="delete bt_icon bt_icon_b1">清空</div>
+			</li>
+		</ul>
+		<!--已选数据-->
+		<div class="datas-wrapper"></div>
+	</div>
+</div>
+<div class="orgainzes" style="float:left;clear:left;margin-top:10px">
+	<div class="editContainer">
+		<div unselectable="on" class="enterBlock noEdit"><b class="b" levelSe="0-1" levelId="11">李明</b><span class="semicolon">;</span></div>
+		<div unselectable="on" class="enterBlock noEdit"><b class="b" levelSe="1-1" levelId="21">刘强</b><span class="semicolon">;</span></div>
+		<div unselectable="on" class="enterBlock noEdit"><b class="b" levelSe="3-1-2" levelId="412">马翔</b><span class="semicolon">;</span></div>
+		<div class="itemWraper">
+			<input type="text" class="selItem" size="2" maxlength="100" onkeypress="checkLength(this)" onblur="ob(event,this)"  onKeyDown="okd(event,this)" onKeyUp="oku(event,this)" />
+		</div>
+	</div>
+</div>
+</body>
+</html>

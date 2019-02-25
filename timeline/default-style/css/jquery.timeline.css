@@ -1,0 +1,15 @@
+
+.timeline{width: 25%;position: relative;float: left;border-right: 1px solid #DDDDDD;height:100%;}
+.timeline a{color: #000000;}
+.dates{position: absolute;right: 10px;}
+.dates li {list-style: none;line-height: 70px;text-align:right; padding-right: 30px;font-size:13px;position:relative;padding-bottom: 10px;cursor: pointer;}
+.dates li.focus,.dates li.focus a{font-size:20px;color:#2785FF;}
+.dates li.focus .timeicon1{background:url('../images/timeicon1.png') no-repeat;position:absolute;right:-21px;width:16px;height:16px;top:27px;}
+
+.details{overflow-y: auto;overflow-x: hidden;padding: 0px 80px;}
+.detail{padding-bottom: 25px;border-top: 1px solid #DDDDDD;/* padding-bottom: 15px; */overflow: hidden;}
+.detail_pt{  padding-top: 25px;}
+.detail h3{font-size: 18px;font-weight: normal;height:40px;line-height: 40px;margin-bottom: 20px;position:relative;}
+.item{min-height: 36px; position: relative;}
+.item label{display: inline-block;}
+.item .itemLabel{width: 100px;}

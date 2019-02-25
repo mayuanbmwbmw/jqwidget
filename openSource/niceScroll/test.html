@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <script src="../../common/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        #menu{
+            height: 200px;
+            width: 100px;
+            border: 1px solid #AAAAAA;
+            padding-right: 10px;
+        }
+        .menu_list{
+            width: 100%;
+        }
+        .menu_list li{
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #AAAAAA;
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#menu").niceScroll({
+                cursorcolor:"#088287",
+                autohidemode:false,
+                railalign:"left"
+            });
+            //具体APi参见：http://www.86y.org/art_detail.aspx?id=642
+            //http://www.cnblogs.com/jinqi79731/p/nicescroll.html
+            var count=14;
+            $("#addMenu").click(function(){
+                $("#menuList").append($("<li>菜单"+(++count)+"</li>"));
+                $("#menu").getNiceScroll().resize()
+            })
+
+            //$("#menu").getNiceScroll().doScrollLeft(x, duration); // 沿X轴滚动   
+            $("#scrollTop").click(function(){
+                $("#menu").getNiceScroll(0).doScrollTop(0,1000); // 沿Y轴滚  top值，持续时间
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <ul id="menuList" class="menu_list">
+            <li>首页</li>
+            <li>菜单1</li>
+            <li>菜单2</li>
+            <li>菜单3</li>
+            <li>菜单4</li>
+            <li>菜单5</li>
+            <li>菜单6</li>
+            <li>菜单7</li>
+            <li>菜单8</li>
+            <li>菜单9</li>
+            <li>菜单10</li>
+            <li>菜单11</li>
+            <li>菜单12</li>
+            <li>菜单13</li>
+            <li>菜单14</li>
+        </ul>
+    </div>
+    <input type="button" id="addMenu" value="添加菜单项"/>
+    <input type="button" id="scrollTop" value="滚到顶"/>
+</body>
+</html>

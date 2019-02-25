@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/content.css">
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.zl_select.min.js"></script>
+<title></title>
+<script>
+$(function(){
+	$(".zl_select.a").zl_select({
+		w: 200
+		,h: 30
+	});
+})
+function select_two(){
+	$(">select",".zl_select").val("2");
+	$(">select",".zl_select").trigger("change");
+}
+function select_four(){
+	$(">select",".zl_select").val("4");
+	$(">select",".zl_select").trigger("change");
+}
+function a(){
+	var a = $("#test").clone();
+	a.appendTo("body");
+	//$(".select-container",a).remove();
+	a.zl_select({
+		w: 200
+		,h: 30
+	}).show()
+}
+</script>
+
+</head>
+<body>
+<div class="zl_select a">
+	<select>
+		<option value="1">第一项</option>
+		<option value="2">第二项</option>
+		<option value="3">第三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三项</option>
+		<option value="4" selected="selected">第四项</option>
+		<option value="5">第五项</option>
+	</select>
+</div><br>
+<div class="zl_select a" >
+	<select>
+		<option value="1">一</option>
+		<option value="2">二</option>
+		<option value="3">三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三</option>
+		<option value="4" selected="selected">四</option>
+		<option value="5">五</option>
+	</select>
+</div>
+<div  class="zl_select b" id="test" style="display:none">
+	<select>
+		<option value="1">一</option>
+		<option value="2">二</option>
+		<option value="3">三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三</option>
+		<option value="4" selected="selected">四</option>
+		<option value="5">五</option>
+	</select>
+</div>
+<button onClick="select_two()">第二项</button>
+<button onClick="select_four()">第四项</button>
+<button onClick="a()">第四项</button>
+</body>
+</html>

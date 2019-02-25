@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>My First Grid</title>
+<link rel="stylesheet" type="text/css" media="screen" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="ui.jqgrid.css" />
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 75%;
+	overflow-x:hidden;
+}
+</style>
+<script src="../../common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="grid.locale-cn.js" type="text/javascript"></script>
+<script src="jquery.jqGrid.src.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+   $("#list").jqGrid({
+        url: "data/data.json",
+        datatype: "JSON",
+        mtype: "GET",
+        colNames: ["项目编号", "专利名称", "专利号", "专利权人", "授权时间", "审核状态"],
+        colModel: [
+            { name: "invid", width: 155,frozen:true},
+            { name: "invdate", width: 190 },
+            { name: "amount", width: 180, align: "right",editable:true,edittype:"textarea" },
+            { name: "tax", width: 180, align: "right" },
+            { name: "total", width: 180, align: "right"  },
+            { name: "note", width: 150, sortable: false }
+        ],
+        pager: "#pager",
+        rowNum: 10,
+        rowList: [10, 20, 30],
+		width: 800,
+		height: 'auto',
+		shrinkToFit: false,
+		rownumbers: true,
+		toolbar:[true,"both"],
+        sortname: "invid",
+        sortorder: "desc",
+        viewrecords: true,
+        caption: "项目专利",
+		emptyrecords:"当前数据为空！"
+    }); 
+	
+   jQuery("#list").jqGrid('setFrozenColumns');
+}); 
+</script>
+</head>
+<body>
+    <div class="table" style="margin:0 auto;width:800px"><table id="list"></table> </div>
+    <div id="pager"></div> 
+</body>	
+</html>

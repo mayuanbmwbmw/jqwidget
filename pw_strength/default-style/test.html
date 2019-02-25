@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/zl_pw_strength.css">
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.zl_pw_strength.js"></script>
+<title></title>
+<style>
+.ul_style{
+	list-style:none;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+}
+.ul_style li{
+	list-style:none;
+	display:inline;
+	float:left;
+}
+.all_account{
+	float:left;
+	clear:left;
+}
+.all_sonaccount{
+	float:left;
+	margin-left:20px;
+}
+.all_account span{
+	margin-top:3px;
+	margin-left:5px;
+	float:left;
+}
+.all_sonaccount span{
+	margin-top:3px;
+	margin-left:5px;
+	float:left;
+}
+</style>
+<script>
+$(function(){
+	$(".pw_strength").zl_pw_strength({pw_level:"lower",name:"pw"});
+})
+function a (){
+	$(".pw_strength").zl_pw_strength({pw_level:"middle",name:"pw"});
+}
+</script>
+</head>
+<body>
+<ul class="ul_style">
+	<li onClick="a()">密码强度：</li>
+	<li>
+		<div name="pw" class="pw_strength"></div>
+	</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* CSS Document */
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 0;
+}
+#datepicker .triangle{
+	width: 26px;
+	height: 14px;
+	background: url(triangle.png);
+	margin-top: -13px;
+	position: absolute;
+	margin-left: 75px;
+
+}

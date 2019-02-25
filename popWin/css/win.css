@@ -1,0 +1,95 @@
+﻿.winbg{
+	background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/ 
+	filter:Alpha(opacity=50); 
+	background:#000000;/*实现IE背景透明*/
+}
+.win{position:absolute;}
+
+.win iframe{position:absolute;background:none;}
+
+
+.active .shadow {left:-10px;top:-10px;}
+.deactive .shadow {left:-5px;top:-5px;}
+.shadow .s-n{background: url(win/s-h.png) repeat-x left top;height:8px;right:8px;top:0px;position:absolute;overflow:hidden;}
+.shadow .s-nw{background: url(win/s-corner.png) no-repeat left top;width:8px;height:8px;top:0px;position:absolute;overflow:hidden;}
+.shadow .s-ne{background: url(win/s-corner.png) no-repeat right top;width:8px;height:8px;top:0px;position:absolute;overflow:hidden;}
+.shadow .s-w{background: url(win/s-v.png) repeat-y left top;width:8px;left:0px;top:8px;position:absolute;overflow:hidden;}
+.shadow .s-e{background: url(win/s-v.png) repeat-y right top;width:8px;top:8px;right:0px;position:absolute;overflow:hidden;}
+.shadow .s-s{background: url(win/s-h.png) repeat-x left bottom;height:8px;right:8px;bottom:0px;position:absolute;overflow:hidden;}
+.shadow .s-se{background: url(win/s-corner.png) no-repeat right bottom;width:8px;height:8px;right:0px;bottom:0px;position:absolute;overflow:hidden;}
+.shadow .s-sw{background: url(win/s-corner.png) no-repeat left bottom;width:8px;height:8px;bottom:0px;position:absolute;overflow:hidden;}
+
+.normalwin .nw{background: url(win/win-corner.gif) no-repeat left top;left:0px;top:0px;width:6px;height:23px;position:absolute;overflow:hidden;}
+.normalwin .n{background: url(win/win-h.gif) repeat-x left top;top:0px;height:23px;position:absolute;overflow:hidden;font:12px/22px "Arial";color:#333;text-align:center;}
+.normalwin .ne{background: url(win/win-corner.gif) no-repeat right top;top:0px;width:6px;height:23px;position:absolute;overflow:hidden;}
+.normalwin .w{background: url(win/win-v.gif) repeat-y left top;left:0px;width:2px;position:absolute;overflow:hidden;}
+.normalwin .e{background: url(win/win-v.gif) repeat-y right top;width:2px;position:absolute;overflow:hidden;}
+.normalwin .sw{background: url(win/win-corner.gif) no-repeat left bottom;left:0px;width:2px;height:2px;position:absolute;overflow:hidden;}
+.normalwin .s{background: url(win/win-h.gif) repeat-x left bottom;height:2px;position:absolute;overflow:hidden;}
+.normalwin .se{background: url(win/win-corner.gif) no-repeat right bottom;width:2px;height:2px;position:absolute;overflow:hidden;}
+.normalwin .c{background:#efefef;position:absolute;overflow:auto;}
+.normalwin .resizer{background:url(win/corner.png);width:12px;height:12px;position:absolute;overflow:hidden;cursor:se-resize;}
+.normalwin .close{background:url(win/win-control.gif) no-repeat -48px 0;right:5px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.normalwin .max{background:url(win/win-control.gif) no-repeat -32px 0;right:23px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.normalwin .max{background:url(win/win-control.gif) no-repeat -64px 0;right:23px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.normalwin .min{background:url(win/win-control.gif) no-repeat -16px 0;right:41px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.normalwin .collapse{}
+
+.normalwin.deactive {}
+.normalwin.deactive .close{opacity:0.5;filter:alpha(opacity=50);}
+.normalwin.deactive .max{opacity:0.5;filter:alpha(opacity=50);}
+.normalwin.deactive .min{opacity:0.5;filter:alpha(opacity=50);}
+.normalwin.deactive .collapse{opacity:0.5;filter:alpha(opacity=50);}
+.normalwin.deactive .n{color:#999;}
+
+.dialogwin .nw{background: url(win/win-corner.png) no-repeat left top;left:0px;top:0px;width:4px;height:23px;position:absolute;overflow:hidden;}
+.dialogwin .n{background:rgba(32, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/filter:Alpha(opacity=50);background:#200000;/*实现IE背景透明*/ top:0px;height:15px;position:absolute;overflow:hidden;font:12px/12px "Arial,微软雅黑";color:#FFF;text-align:left;text-indent:10px;line-height:18px;}
+.dialogwin .ne{background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/ filter:Alpha(opacity=50); background:#000000;/*实现IE背景透明*/top:0px;width:6px;height:23px;position:absolute;overflow:hidden;}
+.dialogwin .w{background: url(win/win-v.png) repeat-y left top;left:0px;width:4px;position:absolute;overflow:hidden;}
+.dialogwin .e{background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/ filter:Alpha(opacity=50); background:#000000;/*实现IE背景透明*/ width:5px;position:absolute;overflow:hidden;}
+.dialogwin .sw{background: url(win/win-corner.png) no-repeat left bottom;left:0px;width:2px;height:2px;position:absolute;overflow:hidden;}
+/*窗口底下白色和黑色边框*/
+.dialogwin .s_w_border{background:#FFF;/*实现IE背景透明*/ height:0px;position:absolute;overflow:hidden;}
+.dialogwin .s_b_border{background:rgba(32, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/ filter:Alpha(opacity=50); background:#200000;/*实现IE背景透明*/ height:8px;position:absolute;overflow:hidden;}
+
+.dialogwin .s{background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/ filter:Alpha(opacity=50); background:#000000;/*实现IE背景透明*/ height:5px;position:absolute;overflow:hidden;}
+.dialogwin .se{background: url(win/win-corner.png) no-repeat right bottom;width:2px;height:2px;position:absolute;overflow:hidden;}
+.dialogwin .c{position:absolute;overflow:auto;background: #fff}
+.dialogwin .resizer{background:url(win/corner.png);width:12px;height:12px;position:absolute;overflow:hidden;}
+.dialogwin .max{background:url(win/win-control.gif) no-repeat -32px 0;right:23px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.dialogwin .restore{background:url(win/win-control.gif) no-repeat -64px 0;right:23px;top:2px;width:16px;height:16px;position:absolute;overflow:hidden;cursor:pointer;}
+.dialogwin .close{background:url(../images/bt_close.png) center no-repeat;right:8px;top:4px;width:11px;height:11px;position:absolute;overflow:hidden;cursor:pointer;}
+.dialogwin .collapse{display:none;background:url(win/win-control.gif) no-repeat 0 0;left:6px;top:1px;width:20px;height:21px;position:absolute;overflow:hidden;cursor:pointer;}
+
+.toolwin .nw{background: #555;width:1px;height:12px;position:absolute;overflow:hidden;border-top:1px solid #555;border-bottom:1px solid #555;}
+.toolwin .n{background: #b8b7b7;height:12px;position:absolute;overflow:hidden;border-top:1px solid #555;border-bottom:1px solid #555;}
+.toolwin .ne{background: #555;width:1px;height:12px;position:absolute;overflow:hidden;border-top:1px solid #555;border-bottom:1px solid #555;}
+.toolwin .w{background: #555;width:1px;position:absolute;overflow:hidden;}
+.toolwin .e{background: #555;width:1px;position:absolute;overflow:hidden;}
+.toolwin .sw{background: #555;width:1px;height:1px;position:absolute;overflow:hidden;}
+.toolwin .s{background: #555;height:1px;position:absolute;overflow:hidden;}
+.toolwin .se{background: #555;width:1px;height:1px;position:absolute;overflow:hidden;}
+.toolwin .c{background:#d5d5d5;position:absolute;overflow:hidden;}
+.toolwin .close{background:url(win/close-2.gif);right:2px;top:2px;width:9px;height:9px;position:absolute;overflow:hidden;cursor:pointer;}
+.toolwin .max, .toolwin .min{display:none;}
+
+.sidewin .nw{background: #555;width:10px;height:1px;position:absolute;overflow:hidden;border-left:1px solid #555;border-right:1px solid #555;}
+.sidewin .n{background: #555;height:1px;position:absolute;overflow:hidden;}
+.sidewin .ne{background: #555;width:1px;height:1px;position:absolute;overflow:hidden;}
+.sidewin .w{background: #b8b7b7;width:10px;position:absolute;overflow:hidden;border-left:1px solid #555;border-right:1px solid #555;}
+.sidewin .e{background: #555;width:1px;position:absolute;overflow:hidden;}
+.sidewin .sw{background: #555;width:10px;height:1px;position:absolute;overflow:hidden;border-left:1px solid #555;border-right:1px solid #555;}
+.sidewin .s{background: #555;height:1px;position:absolute;overflow:hidden;}
+.sidewin .se{background: #555;width:1px;height:1px;position:absolute;overflow:hidden;}
+.sidewin .c{background:#d5d5d5;position:absolute;overflow:hidden;}
+.sidewin .close{background:url(win/close-2.png);left:2px;top:2px;width:9px;height:9px;position:absolute;overflow:hidden;cursor:pointer;}
+.sidewin .max, .toolwin .min{display:none;}
+
+.noborderwin .nw, .noborderwin .n, .noborderwin .ne, .noborderwin .w, .noborderwin .e, .noborderwin .sw, .noborderwin .s, .noborderwin .se, .noborderwin .resizer, .noborderwin .close, .noborderwin .max, .noborderwin .min, .noborderwin .collapse{position:absolute;width:0px;height:0px;overflow:hidden;}
+.noborderwin .c{background:none;;position:absolute;overflow:hidden;}
+.noborderwin .shadow{display:none;}
+
+
+.windowsIcon{padding:10px;float:left;}
+.windowsImg{width:128px;height:128px;background:url(icons/win.png) no-repeat center center;}
+.windowsText{font:bold 12px "Arial";color:#fff;text-align:center;}

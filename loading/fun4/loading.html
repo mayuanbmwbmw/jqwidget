@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset='utf-8'>
+<title>无标题文档</title>
+<script type="text/javascript" src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jquery.progressbar.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#pb1").progressBar();
+    $("#pb2").progressBar({ barImage: 'images/progressbg_yellow.gif'} );
+    $("#pb3").progressBar({ barImage: 'images/progressbg_orange.gif', showText: false} );
+    $("#pb4").progressBar(65, { showText: false, barImage: 'images/progressbg_red.gif'} );
+    $(".pb5").progressBar({ max: 2000, textFormat: 'fraction', callback: function(data) { if (data.running_value == data.value) { alert("Callback example: Target reached!"); } }} );
+});
+</script>
+</head>
+<body>
+<table>
+	<tr><td>Default Multicolored Bar</td><td><span class="progressBar" id="pb1">29%</span></td></tr>
+	<tr><td>Yellow Bar</td><td><span class="progressBar" id="pb2">35%</span></td></tr>
+	<tr><td>Orange Bar (No Text)</td><td><span class="progressBar" id="pb3">75%</span></td></tr>
+	<tr><td>Red Bar (No Text)</td><td><span class="progressBar" id="pb4">85%</span></td></tr>
+	<tr><td>Default Multicolored Bar with max value of 2000</td><td><span class="progressBar pb5">1000</span></td></tr>
+</table>
+</body>
+</html>

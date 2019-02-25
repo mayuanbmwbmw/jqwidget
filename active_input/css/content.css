@@ -1,0 +1,57 @@
+/* CSS Document */
+.editContainer{
+	border:1px solid #000;
+	overflow-y:auto;
+	height:200px;
+	width:200px;
+	overflow-x:hidden;
+}
+.selItem{
+	width:auto;
+	max-width:200px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	border:0px;
+	font-size:12px;
+	float:left;
+	outline:none;/*handle chrome style*/
+}
+.itemWraper{
+	float:left;
+	overflow:hidden;
+	width:auto;
+}
+.enterBlock{
+	float:left;
+	cursor:pointer;
+	font-size:12px;
+	max-width:200px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	margin-left:5px;
+}
+.enterBlock b{
+	float:left;
+	font-size:12px;
+	max-width:185px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.enterBlock span{
+	float:left;
+}
+.enterBlock_over{
+	background:#f0f0f0;
+}
+.enterBlock_select{
+	background:#cccccc;
+}
+.selItem_new{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	border:0px;
+	font-size:12px;
+	max-width:200px;
+	float:left;
+	outline:none;/*handle chrome style*/
+}
